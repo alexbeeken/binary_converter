@@ -23,7 +23,21 @@ describe('binary', function() {
     expect(binary(128)).to.equal("10000000");
   });
 
-  it("gives 1000000000001000000010000 when you input 33558544", function() {
-    expect(binary(33558544)).to.equal("1000000000001000000010000");
+  it("gives 1100110011010011001110 when you input 3355854", function() {
+    expect(binary(3355854)).to.equal("1100110011010011001110");
   });
+});
+
+describe('hex', function() {
+  it("gives 0 when you input 0", function() {
+    expect(hex(0)).to.equal("0");
+  });
+
+  it("gives a when you input 10", function() {
+    expect(hex(10)).to.equal("a");
+  });
+
+  it("gives you 11 when you input 17", function() {
+    expect(hex(17)).to.equal("11");
+  })
 });
